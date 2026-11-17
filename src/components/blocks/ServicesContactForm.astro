@@ -1,0 +1,154 @@
+---
+import Section from "@ui/Section.astro";
+import Button from "@ui/Button.astro";
+---
+
+<Section
+	background="bg-2"
+	headingLevel={2}
+	sectionHeader={{
+		title: "Submit Your Inquiry",
+		subtitle:
+			"",
+	}}
+>
+	<form action="" class="card contact__form">
+		<label for="full-name" class="single">
+			<span>Full Name</span>
+			<input
+				type="text"
+				id="full-name"
+				name="full-name"
+				placeholder="John Doe"
+				autocomplete="name"
+				required
+			/>
+		</label>
+		<label for="email" class="single">
+			<span>Email Address</span>
+			<input
+				type="email"
+				id="email"
+				name="email"
+				placeholder="john@example.com"
+				autocomplete="email"
+				required
+			/>
+		</label>
+		<label for="phone" class="single">
+			<span>Phone Number</span>
+			<input
+				type="tel"
+				id="phone"
+				name="phone"
+				placeholder="(555) 000-0000"
+				autocomplete="tel"
+				inputmode="tel"
+				pattern="[0-9+()\-\s.]{7,20}"
+				required
+			/>
+		</label>
+		<label for="subject" class="single">
+			<span>Services</span>
+			<select id="subject" name="subject">
+				<option value="general-inquiry">Recruitment</option>
+				<option value="appointment-help">Workforce Management</option>
+				<option value="billing-question">Both</option>
+			</select>
+		</label>
+		<label for="message" class="double">
+			<span>Message</span>
+			<textarea
+				name="message"
+				id="message"
+				placeholder="Add any additional information or questions you may have here."
+				rows="10"
+				required></textarea>
+		</label>
+		<Button type="submit" variant="solid" color="primary" class="double"
+			>Send Message</Button
+		>
+		<p id="form-status" class="form-status double" aria-live="polite"></p>
+	</form>
+</Section>
+
+<style>
+	.contact__form {
+		display: grid;
+		width: min(100%, 80rem);
+		margin: calc(var(--global-gap) * 2) auto 0;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: var(--global-gap);
+
+		label {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+			color: var(--color-title);
+
+			span {
+				font-size: 1.4rem;
+				font-weight: 600;
+			}
+		}
+
+		input,
+		select,
+		textarea {
+			padding: 1.4rem 1.6rem;
+			color: var(--color-title);
+			border: 1px solid #e8eef8;
+			background-color: var(--color-white);
+			border-radius: 1.2rem;
+			transition: all 0.2s ease;
+
+			&:focus,
+			&:active {
+				border-color: #dae2ff;
+			}
+		}
+
+		textarea {
+			resize: vertical;
+		}
+
+		.single {
+			grid-column: span 1;
+
+			@media screen and (max-width: 768px) {
+				grid-column: span 2;
+			}
+		}
+
+		.double,
+		.form-status {
+			grid-column: span 2;
+		}
+
+		.form-status {
+			margin: 0;
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: var(--color-primary);
+		}
+	}
+</style>
+
+<script>
+	const form = document.querySelector(".contact__form");
+
+	if (form) {
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+			const status = document.getElementById("form-status");
+
+			if (form.checkValidity()) {
+				status.textContent =
+					"Your message has been submitted. We typically respond within 24 business hours.";
+				form.reset();
+			} else {
+				form.reportValidity();
+			}
+		});
+	}
+</script>

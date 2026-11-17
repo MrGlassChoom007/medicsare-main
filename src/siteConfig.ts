@@ -25,32 +25,25 @@ export interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-	name: "Medicsare Clinic",
-	copyright: "© 2026 Medicsare Clinic. All rights reserved.",
-	address: "1200 Medical Plaza, Suite 400, Innovation District, SF 94105",
-	phone: "+1 (000) 123-4567",
-	email: "mail@example.com",
+	name: "Recruitia",
+	copyright: "© 2026 Recruitia. All rights reserved.",
+	address: "404 Recruiting Drive, Winnipeg, MB, Canada",
+	phone: "+1 (204) 123-4567",
+	email: "info@recruitia.ca",
 	nav: {
 		main: [
 			{ text: "About us", url: "/about" },
-			{ text: "Services", url: "/services" },
-			{ text: "Doctors", url: "/doctors" },
-			{ text: "Contact", url: "/contact" }
+			{ text: "Partner With Us", url: "/services" },
+			{ text: "Apply For Opportunities", url: "/contact" }
 		],
 		info: [
-			{ text: "Services", url: "/services" },
-			{ text: "Doctors", url: "/doctors" },
-			{ text: "Pricing", url: "/pricing" }
+			{ text: "Partner With Us", url: "/services" },
 		],
 		support: [
 			{ text: "About us", url: "/about" },
-			{ text: "Contact", url: "/contact" }
+			{ text: "Apply For Opportunities", url: "/contact" }
 		],
-		legal: [
-			{ text: "Privacy Policy", url: "/privacy" },
-			{ text: "Terms of Service", url: "/terms" },
-			{ text: "Cookies Policy", url: "/cookies" },
-		]
+		
 	},
 }
 

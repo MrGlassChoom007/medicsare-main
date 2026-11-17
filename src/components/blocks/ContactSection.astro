@@ -14,9 +14,9 @@ const mapImage = images[`../assets/map.webp`];
 	background="bg-2"
 	headingLevel={1}
 	sectionHeader={{
-		title: "Send Us A Message",
+		title: "Discover Your Next Great Opportunity",
 		subtitle:
-			"Whether you have a question about our services, insurance, or simply want to learn more about our patient care, we are here to help. <br>Our team typically responds within 24 business hours.",
+			"Submit your details and resume below to join the Recruitia job portal. Our team will review your profile and connect you with hand-picked opportunities that match your skills and career goals.",
 	}}
 >
 	<div class="contact-wrapper">
@@ -57,13 +57,12 @@ const mapImage = images[`../assets/map.webp`];
 				/>
 			</label>
 			<label for="subject" class="single">
-				<span>Subject</span>
+				<span>Employment Type</span>
 				<select id="subject" name="subject">
-					<option value="general-inquiry">General Inquiry</option>
-					<option value="appointment-help">Appointment Help</option>
-					<option value="billing-question">Billing Question</option>
-					<option value="insurance-inquiry">Insurance Inquiry</option>
-					<option value="feedback">Feedback</option>
+					<option value="general-inquiry">Full-Time</option>
+					<option value="appointment-help">Part-Time</option>
+					<option value="billing-question">Contract</option>
+					<option value="insurance-inquiry">Internship</option>
 				</select>
 			</label>
 			<label for="message" class="double">
@@ -71,7 +70,7 @@ const mapImage = images[`../assets/map.webp`];
 				<textarea
 					name="message"
 					id="message"
-					placeholder="How can we help you today?"
+					placeholder="Briefly describe your experience and career goals."
 					rows="10"
 					required></textarea>
 			</label>

@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Layout from "@layouts/Layout.astro";
 import HeroSection from "@components/blocks/HeroSection.astro";
 import ServicesSection from "@/components/blocks/ServicesSection.astro";
+import ServicesContactForm from "@/components/blocks/ServicesContactForm.astro";
 import CtaSection from "@components/blocks/CtaSection.astro";
 
 import data from "../content/ServicesPage.json";
@@ -14,5 +15,6 @@ import data from "../content/ServicesPage.json";
 >
 	{data.sections.hero && <HeroSection data={data.sections.hero} />}
 	{data.sections.services && <ServicesSection data={data.sections.services} />}
+	<ServicesContactForm />
 	{data.sections.cta && <CtaSection data={data.sections.cta} />}
 </Layout>
