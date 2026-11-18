@@ -46,13 +46,14 @@ const heroImage = images[`../assets/${props.image}`];
 	</Column>
 
 	<Column>
-		<ImageHolder>
+		<ImageHolder class="image-holder--contain">
 			<Picture
 				src={heroImage}
 				alt=""
 				formats={["avif", "webp"]}
 				width={552}
 				height={480}
+				fit="contain"
 				sizes={"(min-width: 1024px) 60vw, 100vw"}
 			/>
 		</ImageHolder>
