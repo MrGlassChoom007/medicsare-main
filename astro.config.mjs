@@ -3,8 +3,7 @@ import { defineConfig, fontProviders } from "astro/config";
 import icon from "astro-icon";
 
 export default defineConfig({
-	site: 'https://mrglasschoom007.github.io',
-  	base: '/medicsare-main',
+	site: 'https://static.recruitia.ca',
 	devToolbar: {
 		enabled: false,
 	},
