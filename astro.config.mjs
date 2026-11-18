@@ -3,6 +3,7 @@ import { defineConfig, fontProviders } from "astro/config";
 import icon from "astro-icon";
 
 export default defineConfig({
+	site: 'https://github.com/MrGlassChoom007/medicsare-main',
 	devToolbar: {
 		enabled: false,
 	},
